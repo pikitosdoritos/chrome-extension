@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube extension",
+    "version": "1.0.0",
+    "description": "Calculate total YouTube PlayList duration",
+    "permissions": [
+        "activeTab",
+        "storage"
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "YouTube extension"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ]
+}
